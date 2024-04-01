@@ -2,14 +2,11 @@ library(shiny)
 library(ggplot2)
 library(ggcorrplot)
 library(shinydashboard)
-library(shiny)
 library(tidyverse)
 library(shinythemes)
 library(caret)
 
 
-
-# anksjfnasfknasnkl
 
 # Reading data and Creating a model ---------------------------------------
 
@@ -56,7 +53,7 @@ ui <- dashboardPage(
   
   dashboardBody(
     tabItems(
-      # Home tab
+      #Home tab
       tabItem(tabName = "home",
               tags$style(type="text/css",
                          ".content-wrapper { 
@@ -70,7 +67,7 @@ ui <- dashboardPage(
              ),
       
      
-      # Data Summary tab
+      #Data Summary tab
       tabItem(tabName = "summary",
               fluidRow(
                 box(
@@ -99,7 +96,7 @@ ui <- dashboardPage(
               )),
       
       
-      # Prediction tab
+      #Prediction tab
       tabItem(tabName = "prediction",
               fluidRow(
                 box(
@@ -133,7 +130,7 @@ ui <- dashboardPage(
                   background = "navy"
                 ),
                 
-                # Result box
+                #Result box
                 box(
                   title = "Prediction",
                   textOutput("result"),
@@ -209,7 +206,7 @@ server <- function(input, output, session) {
     heart_data
   })
   
-  # Render value boxes
+  #Render value boxes
   output$total_records <- renderValueBox({
     valueBox(total_records, "Total Records", icon = icon("database"), color = "maroon")
   })
@@ -278,4 +275,3 @@ server <- function(input, output, session) {
 
 
 shinyApp(ui, server)
-
