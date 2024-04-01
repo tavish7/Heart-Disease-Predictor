@@ -8,4 +8,4 @@ This repository is about Heart Disease Prediction.
 
 In this modern era there have been a lot of cases of **Heart Disease**. 
 
-Here we have created a *RShiny* application to determine if a particular patient is having a heart disease or not using *Logistic Regression* model.
+Here we have created a `RShiny` application to determine if a particular patient is having a heart disease or not using `Logistic Regression` model.
