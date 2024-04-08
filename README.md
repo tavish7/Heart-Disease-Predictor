@@ -10,4 +10,4 @@ In this modern era there have been a lot of cases of ❤️ **Heart Disease** �
 
 Here we have created a `RShiny` application to determine if a particular patient is having a heart disease or not using `Logistic Regression` model. We have used UCI dataset for training our machine learning model acquiring an accuracy of `81.28%` 📈
 
-Check and interact with the application from [here]("https://o61sb6-tavish-gupta.shinyapps.io/Heart_Disease_Prediction"target="_blank").
+Check and interact with the application from [here](https://o61sb6-tavish-gupta.shinyapps.io/Heart_Disease_Prediction/{:target="_blank"} )
