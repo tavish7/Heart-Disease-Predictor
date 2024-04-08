@@ -1,9 +1,7 @@
 library(shiny)
 library(ggplot2)
-library(ggcorrplot)
-library(shinydashboard)
 library(tidyverse)
-library(shinythemes)
+library(shinydashboard)
 library(caret)
 
 
@@ -28,7 +26,12 @@ set.seed(1024)
 log_model <- train(target ~ ., data = heart_data, 
                         method = "glm", family = "binomial")
 
+# check for null values
+is.null(heart_data)
 
+
+# Glimpse of data
+glimpse(heart_data)
 
 
 # UI ----------------------------------------------------------------------
@@ -148,7 +151,7 @@ ui <- dashboardPage(
                 )
               )),
       
-      #Original Data tab
+      # Data tab
       tabItem(tabName = "data_table",
               fluidRow(
                 box(
@@ -174,6 +177,8 @@ server <- function(input, output, session) {
   female_heart_disease <- sum(heart_data$sex == 0 & heart_data$target == 1)
   
   observeEvent(input$predict, {
+
+    # Creating data frame for input data by user
     df <- data.frame(
       age = input$age,
       sex = ifelse(input$sex == "Male", 1, 0),
